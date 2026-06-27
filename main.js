@@ -9,16 +9,16 @@ const main = async () => {
   const auth = new Authflow('example', './', { authTitle: Titles.MinecraftNintendoSwitch, deviceType: 'Nintendo', flow: 'live' })
 
   portal = new BedrockPortal(auth, {
-    ip: '51.89.166.254',
-    port: 19132,
+    ip: '',
+    port: ,
     joinability: Joinability.FriendsOfFriends,
 
     world: {
-      hostName: 'HCV KitPvP',
-      name: 'discord.gg/Pxp3XgBxTW',
-      version: '1.21.51',
-      memberCount: 14,
-      maxMemberCount: 20,
+      hostName: '',
+      name: '',
+      version: '',
+      memberCount: ,
+      maxMemberCount: ,
 
     },
   })
@@ -34,7 +34,7 @@ const main = async () => {
   portal.use(Modules.RedirectFromRealm, {
   clientOptions: {
     realms: {
-      realmInvite: 'i8ffRzYiABo'
+      realmInvite: 'Your-realm-code'
     }
   },
   chatCommand: {
@@ -49,17 +49,10 @@ const main = async () => {
     checkInterval: 10000,
 
   })
-/*
-  portal.on('playerJoin', (player) => {
-    console.log('Player Join: ', player)
-  })
-*/
    portal.on('playerJoin', (player) => {
-       /*
       setTimeout(() => {
         portal.invitePlayer(player.username);
       }, 2000);
-       */
     });
 
   portal.on('playerLeave', (player) => {
